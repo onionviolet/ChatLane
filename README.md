@@ -81,7 +81,9 @@ Open the game's settings and go to the Chat Wheel tab. This should now feature y
 
 If you later want to edit your config, you can simply load the VPK file again, do your changes, then save and overwrite it.
 
-To uninstall the add-on, you can rename or delete the VPK file. You **MUST** also enter the chat wheel settings and **unbind** any custom entries! Failing to do so will cause the game to **crash** when opening the chat wheel.
+To uninstall the add-on, you can rename or delete the VPK file. You **MUST** also enter the chat wheel settings and **unbind** any custom entries! Failing to do so will cause the game to **crash** when opening the chat wheel or settings.
+
+If you find your game crashing due to ChatLane, you can open the console (F7) and type `ping_wheel_phrase_X 1` (replace X with the numbers 0-7 respectively). This allows unbinding custom menus safely.
 
 ## Known bugs and limitations
 
