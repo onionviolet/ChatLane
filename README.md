@@ -16,7 +16,7 @@ A tool to customize the chat wheel of Valve's game Deadlock:
 
 - Deadlock is in early alpha, so this tool and add-on **may stop working at any moment**.
 - As the tool edits a game file (specifically a script file), I am **not responsible for any bans for users of this tool**. Valve does not have a clear stance on what's fair game when it comes to modding Deadlock yet!
-- Due to a game bug, whenever the game updates (and `gameinfo.gi` file is reset), opening the chat wheel can **crash** your game! You must either patch the `gameinfo.gi` again (as described below), or go to chat wheel options and remove custom menus.
+- Due to a game bug, whenever the game updates (and `gameinfo.gi` file is reset), opening the chat wheel or the settings can **crash** your game! You must either patch the `gameinfo.gi` again (as described below), or unbind the custom menus using the console. See [Known bugs and limitations](#known-bugs-and-limitations) below.
 
 ## Installation and Usage
 
@@ -77,26 +77,24 @@ Once done, ChatLane can directly save `pakXX_dir.vpk` files without any intermed
 
 ![Installation instruction step 4](docs/installation-4.png)
 
-Open the game's settings and go to the Chat Wheel tab. This should now feature your new custom menus at the bottom, as well as any hidden voice commands you've decided to enable.
+Open the game's settings and scroll down to the Chat Wheel settings. This should now feature your new custom menus at the bottom, as well as any hidden voice commands you've decided to enable.
 
 If you later want to edit your config, you can simply load the VPK file again, do your changes, then save and overwrite it.
 
-To uninstall the add-on, you can rename or delete the VPK file. You **MUST** also enter the chat wheel settings and **unbind** any custom entries! Failing to do so will cause the game to **crash** when opening the chat wheel or settings.
-
-If you find your game crashing due to ChatLane, you can open the console (F7) and type `ping_wheel_phrase_X 1` (replace X with the numbers 0-7 respectively). This allows unbinding custom menus safely.
+To uninstall the add-on, you can rename or delete the VPK file. You **MUST** also enter the chat wheel settings and **unbind** any custom entries! Failing to do so will cause the game to **crash** when opening the chat wheel or settings. To fix this, see [Known bugs and limitations](#known-bugs-and-limitations).
 
 ## Known bugs and limitations
 
 Entries in this list can not be fixed easily, due to how the chat wheel system of Deadlock works. The list will be updated as Valve fixes them.
 
-- Opening the chat wheel can **crash** the game in following scenarios:
+- Opening the chat wheel or settings can **crash** the game in following scenarios:
   - A game update caused the `gameinfo.gi` file to reset. Use a mod loader or manually check that `SearchPaths` are up-to-date.
   - You removed a custom menu without unbinding it from the game's chat wheel settings.
   - You uninstalled the add-on, but did not unbind custom menus from the game's chat wheel settings.
+  - **To fix this**, you can open the console (F7) and type `ping_wheel_phrase_X 1` (replace X with the numbers 0-7 respectively). This allows unbinding custom menus safely.
 - A custom menu can only have up to 12 entries, filling up the entire circle.
-- Custom menu order of items is reversed when you are on the Sapphire team.
-- Having multiple menus on the wheel causes the menu to show incorrect contents.
-- Menus sometimes open in the wrong direction, making them unusable. Simply bind them to another direction.
+- Custom menu order of items is reversed when you are on the Archmother team.
+- Menus bound to the top slot of the chat wheel are opened in the wrong direction, making them unusable. Simply bind them to another direction.
 - Some custom menu items can't be selected depending on which slot the chat wheel is bound to. See https://github.com/RedMser/ChatLane/issues/58 for a workaround.
 - A placeholder voice line plays when you select a custom menu (when not selecting one of its entries).
 
