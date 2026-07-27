@@ -4,6 +4,15 @@
 
 A tool to customize the chat wheel of Valve's game Deadlock:
 
+> [!NOTE]
+> This fork is maintained as the ChatLane conversion engine for
+> [Grimoire](https://github.com/onionviolet/grimoire). Grimoire provides the
+> user interface, mod installation, and lifecycle management; this project
+> remains responsible for converting the documented YAML configuration to and
+> from a compatible ChatLane VPK. It is a derivative of
+> [RedMser/ChatLane](https://github.com/RedMser/ChatLane), retained as the
+> `upstream` remote. See [the integration notes](docs/grimoire-integration.md).
+
 - Create custom chat wheel menus. Name, icon and contents can be customized.
 - Unlock voice commands that are normally not bindable.
 - One click to generate an add-on VPK file, ready for use in the game.
